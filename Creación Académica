@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CELESTE - Creación de Tareas | Éxito Académico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        celeste: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7', 
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e', 
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(12, 74, 110, 0.9), rgba(12, 74, 110, 0.7));
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-celeste-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">C</div>
+                    <span class="font-bold text-2xl tracking-tight text-celeste-900">CELESTE</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-celeste-600 font-medium transition-colors">Inicio</a>
+                    <a href="#nosotros" class="text-gray-600 hover:text-celeste-600 font-medium transition-colors">Nosotros</a>
+                    <a href="#servicios" class="text-gray-600 hover:text-celeste-600 font-medium transition-colors">Servicios</a>
+                    <a href="#tutorias" class="text-gray-600 hover:text-celeste-600 font-medium transition-colors">Tutorías</a>
+                    <a href="#precios" class="text-gray-600 hover:text-celeste-600 font-medium transition-colors">Precios</a>
+                    <a href="https://wa.me/50760638386" target="_blank" class="bg-celeste-600 hover:bg-celeste-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i> Contáctanos
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 p-2"><i data-lucide="menu" class="w-7 h-7"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg p-4 space-y-2">
+            <a href="#inicio" class="block px-3 py-3 text-gray-700 hover:bg-celeste-50">Inicio</a>
+            <a href="#nosotros" class="block px-3 py-3 text-gray-700 hover:bg-celeste-50">Nosotros</a>
+            <a href="#servicios" class="block px-3 py-3 text-gray-700 hover:bg-celeste-50">Servicios</a>
+            <a href="#tutorias" class="block px-3 py-3 text-gray-700 hover:bg-celeste-50">Tutorías</a>
+            <a href="#precios" class="block px-3 py-3 text-gray-700 hover:bg-celeste-50">Precios</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[80vh]">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop" alt="Estudiante trabajando" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-white text-center lg:text-left">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Comprometidos con tu <span class="text-celeste-300">éxito académico</span></h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">Trabajos responsables, organizados y de calidad en todo Panamá. No permitas que el tiempo sea un límite.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="#servicios" class="px-8 py-4 bg-white text-celeste-900 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">Nuestros Servicios</a>
+                <a href="https://wa.me/50760638386" target="_blank" class="px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white/10 transition">Cotizar vía WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1287&auto=format&fit=crop" alt="María Cruz Fundadora" class="rounded-3xl shadow-2xl h-[500px] w-full object-cover" />
+            <div class="space-y-6">
+                <span class="text-celeste-600 font-bold uppercase tracking-widest text-sm">Conócenos</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Más de 3 años impulsando metas en Panamá</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Soy <strong>María Cruz</strong>, licenciada en Ingeniería en Operaciones y Logística Empresarial. Inicié CELESTE en 2023 para ayudar a estudiantes a avanzar sin sentirse limitados por el estrés académico o el exceso de tareas.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center gap-2"><i data-lucide="shield-check" class="text-celeste-500"></i> Responsabilidad</div>
+                    <div class="flex items-center gap-2"><i data-lucide="shield-check" class="text-celeste-500"></i> Honestidad</div>
+                    <div class="flex items-center gap-2"><i data-lucide="shield-check" class="text-celeste-500"></i> Confidencialidad</div>
+                    <div class="flex items-center gap-2"><i data-lucide="shield-check" class="text-celeste-500"></i> Puntualidad</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">¿En qué podemos ayudarte?</h2>
+                <p class="text-gray-600">Soluciones académicas para todos los niveles.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <i data-lucide="graduation-cap" class="w-12 h-12 text-celeste-600 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Nivel Universitario</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Tesis y Proyectos de Grado</li>
+                        <li>• Anteproyectos y Tesinas</li>
+                        <li>• Monografías e Informes</li>
+                        <li>• Ensayos y Formato APA</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <i data-lucide="book-open" class="w-12 h-12 text-celeste-600 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Escolar y Bachiller</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Tareas y Proyectos Escolares</li>
+                        <li>• Talleres y Folletos</li>
+                        <li>• Actividades Virtuales</li>
+                        <li>• Bachilleratos Técnicos</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <i data-lucide="monitor" class="w-12 h-12 text-celeste-600 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Acompañamiento</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Gestión de Clases Virtuales</li>
+                        <li>• Foros y Cuestionarios</li>
+                        <li>• Módulos Académicos</li>
+                        <li>• Diseño en Canva y Padlet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorías (Nueva Sección) -->
+    <section id="tutorias" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-celeste-900 rounded-[3rem] p-8 md:p-16 text-white relative overflow-hidden shadow-2xl">
+                <div class="relative z-10">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <span class="bg-celeste-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase mb-4 inline-block">Exclusivo</span>
+                            <h2 class="text-3xl md:text-5xl font-bold mb-6">Tutorías Virtuales Personalizadas</h2>
+                            <p class="text-celeste-100 text-lg mb-8">Refuerza tus conocimientos y domina tus materias con guía experta. Nos enfocamos en que realmente comprendas el tema.</p>
+                            
+                            <div class="grid sm:grid-cols-2 gap-6 mb-8">
+                                <div class="space-y-3">
+                                    <h4 class="font-bold text-celeste-300">Áreas de Especialidad:</h4>
+                                    <ul class="text-sm space-y-2">
+                                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Administración</li>
+                                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Logística</li>
+                                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Turismo</li>
+                                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Área Marítima</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-3">
+                                    <h4 class="font-bold text-celeste-300">Te ayudamos en:</h4>
+                                    <ul class="text-sm space-y-2">
+                                        <li>• Explicación de temas complejos</li>
+                                        <li>• Preparación para exposiciones</li>
+                                        <li>• Desarrollo de talleres</li>
+                                        <li>• Orientación en proyectos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+                            <h3 class="text-2xl font-bold mb-6 text-center">Detalles del Servicio</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                                    <span class="flex items-center gap-2"><i data-lucide="video" class="text-celeste-400"></i> Modalidad:</span>
+                                    <span class="font-bold">Virtual</span>
+                                </div>
+                                <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                                    <span class="flex items-center gap-2"><i data-lucide="dollar-sign" class="text-celeste-400"></i> Precio:</span>
+                                    <span class="font-bold">Desde $10 / hora</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="flex items-center gap-2"><i data-lucide="clock" class="text-celeste-400"></i> Tiempo Mínimo:</span>
+                                    <span class="font-bold">2 horas</span>
+                                </div>
+                                <p class="text-xs text-celeste-200 italic mt-4">* En tutorías presenciales, el cliente cubre gastos de transporte.</p>
+                                <a href="https://wa.me/50760638386" target="_blank" class="block w-full bg-celeste-500 hover:bg-celeste-400 text-white font-bold py-4 rounded-xl text-center transition shadow-lg">Agendar Tutoría</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precios -->
+    <section id="precios" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Tarifas Referenciales</h2>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <table class="w-full text-left">
+                    <tr class="bg-celeste-600 text-white font-bold">
+                        <th class="p-6">Servicio</th>
+                        <th class="p-6 text-right">Tarifa</th>
+                    </tr>
+                    <tr class="border-b"><td class="p-6">Investigaciones</td><td class="p-6 text-right font-bold">$25 - $50+</td></tr>
+                    <tr class="border-b"><td class="p-6">Anteproyectos</td><td class="p-6 text-right font-bold">$75 - $100</td></tr>
+                    <tr class="border-b"><td class="p-6">Monografías y Tesinas</td><td class="p-6 text-right font-bold">$100 - $200</td></tr>
+                    <tr class="bg-celeste-50"><td class="p-6 font-bold">Tesis de Grado</td><td class="p-6 text-right font-bold text-xl text-celeste-700">$250 - $350</td></tr>
+                </table>
+            </div>
+            <p class="text-center text-gray-500 mt-6 text-sm">Precios sujetos a complejidad y tiempo de entrega.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div>
+                <h4 class="text-2xl font-bold text-celeste-400 mb-6">CELESTE</h4>
+                <p class="text-gray-400">Comprometidos con tu éxito académico en todo Panamá.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-widest text-sm">Contacto</h4>
+                <p class="text-gray-400 mb-2">WhatsApp: +507 6063-8386</p>
+                <p class="text-gray-400 break-all">trabajandoparati2023@gmail.com</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-widest text-sm">Frase del día</h4>
+                <p class="italic text-celeste-200">"Los límites en la vida te los pones tú, Siempre corre por tus metas"</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/50760638386" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] p-4 rounded-full shadow-2xl text-white hover:scale-110 transition z-50">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <script>
+        lucide.createIcons();
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.onclick = () => menu.classList.toggle('hidden');
+    </script>
+</body>
+</html>
